@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Movie Details</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">🎬 CineBook</h1>
+        <div class="nav-links">
+            <a href="./movies.html">Back to Movies</a>
+        </div>
+    </nav>
+
+    <div class="movie-details-container">
+        <img id="moviePoster" src="" alt="Movie Poster">
+
+        <div class="movie-details-info">
+            <h2 id="movieTitle">Movie Name</h2>
+            <p id="movieGenre">Genre: -</p>
+            <p id="movieRating">Rating: -</p>
+            <p id="movieYear">Year: -</p>
+
+            <button class="book-btn" onclick="goToBooking()">
+                Continue to Booking
+            </button>
+        </div>
+    </div>
+
+    <script src="./movies.js" defer></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const selectedMovie = params.get("movie");
+
+            const movie = movies.find(m => m.title === selectedMovie);
+
+            if (movie) {
+                document.getElementById("movieTitle").textContent = movie.title;
+                document.getElementById("movieGenre").textContent = "Genre: " + movie.genre;
+                document.getElementById("movieRating").textContent = "Rating: " + movie.rating;
+                document.getElementById("movieYear").textContent = "Year: " + movie.year;
+                document.getElementById("moviePoster").src = movie.poster;
+            } else {
+                document.getElementById("movieTitle").textContent = "Movie not found";
+            }
+        });
+
+        function goToBooking() {
+            const params = new URLSearchParams(window.location.search);
+            const movie = params.get("movie");
+
+            window.location.href =
+                "./booking.html?movie=" + encodeURIComponent(movie);
+        }
+    </script>
+
+</body>
+</html>

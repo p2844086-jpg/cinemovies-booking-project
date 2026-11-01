@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineBook - Movies</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="welcome-page">
+
+    <nav class="navbar">
+        <h1 class="logo">🎬 CineBook</h1>
+
+        <div class="nav-links">
+            <a href="./index.html" class="nav-login">Home</a>
+            <a href="./login.html" class="nav-signup">Logout</a>
+        </div>
+    </nav>
+
+    <main class="movies-page">
+
+        <h2>Explore Movies 🎬</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search your favourite movies..."
+            class="movie-search"
+        >
+
+        <section>
+            <h2>Now Showing</h2>
+            <div id="movieContainer" class="movie-container"></div>
+        </section>
+
+        <section>
+            <h2>Upcoming Movies</h2>
+            <div id="upcomingContainer" class="movie-container"></div>
+        </section>
+
+    </main>
+
+    <script src="./movies.js" defer></script>
+
+</body>
+</html>

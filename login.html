@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="auth-page">
+
+    <nav class="navbar auth-navbar">
+        <h1 class="logo">🎬 CineBook</h1>
+        <a href="./index.html" class="back-home">← Home</a>
+    </nav>
+
+    <main class="auth-container login-container">
+
+        <div class="auth-heading">
+            <span class="auth-icon">🎬</span>
+            <h2>Welcome Back!</h2>
+            <p>Login to continue your cinema experience.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+
+            <label for="loginEmail">Email Address</label>
+            <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="loginPassword">Password</label>
+            <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <label class="show-password">
+                <input type="checkbox" id="showPassword">
+                Show Password
+            </label>
+
+            <button type="submit" class="auth-button">
+                Login →
+            </button>
+
+        </form>
+
+        <p class="auth-switch">
+            Don't have an account?
+            <a href="./signup.html">Sign Up here</a>
+        </p>
+
+    </main>
+
+    <script src="./auth.js" defer></script>
+
+</body>
+</html>

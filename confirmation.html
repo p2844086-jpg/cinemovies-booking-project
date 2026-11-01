@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation | CineBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">🎬 Cine<span>Book</span></div>
+</header>
+
+<main class="page-container">
+    <div class="panel" id="ticket">
+        <h1 style="color:#36c98b;">Booking Successful!</h1>
+        <p>Your movie ticket has been booked successfully.</p>
+
+        <div id="ticketDetails" style="margin-top:25px;"></div>
+
+        <button class="action-btn" onclick="window.print()">
+            Print Ticket
+        </button>
+
+        <br><br>
+
+        <a href="index.html" class="primary-btn">
+            Back to Home
+        </a>
+    </div>
+</main>
+
+<script src="js/confirmation.js"></script>
+</body>
+</html>

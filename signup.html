@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Sign Up</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="auth-page">
+
+    <nav class="navbar auth-navbar">
+        <h1 class="logo">🎬 CineBook</h1>
+        <a href="./index.html" class="back-home">← Home</a>
+    </nav>
+
+    <main class="auth-container signup-container">
+
+        <div class="auth-heading">
+            <span class="auth-icon">🎟️</span>
+            <h2>Create Account</h2>
+            <p>Join CineBook and enjoy your favourite movies.</p>
+        </div>
+
+        <form id="signupForm" class="auth-form">
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10-digit mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+            >
+
+            <label for="password">Create Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Minimum 8 characters"
+                minlength="8"
+                required
+            >
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+            >
+
+            <button type="submit" class="auth-button">
+                Create Account →
+            </button>
+
+        </form>
+
+        <p class="auth-switch">
+            Already have an account?
+            <a href="./login.html">Login here</a>
+        </p>
+
+    </main>
+
+    <script src="./auth.js" defer></script>
+
+</body>
+</html>

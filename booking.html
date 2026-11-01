@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Movie | CineBook</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">🎬 Cine<span>Book</span></div>
+        <a href="index.html" class="nav-btn">Home</a>
+    </header>
+
+    <!-- Booking Section -->
+    <main class="page-container">
+
+        <h1>Book Your Movie Tickets</h1>
+
+        <div class="panel">
+
+            <h2 id="movieName">Loading movie...</h2>
+
+            <!-- Theatre Selection -->
+            <div class="form-group">
+                <label for="theatre">Select Theatre</label>
+
+                <select id="theatre" required>
+                    <option value="PVR Cinemas">PVR Cinemas</option>
+                    <option value="INOX Cinemas">INOX Cinemas</option>
+                    <option value="Asian Cinemas">Asian Cinemas</option>
+                </select>
+            </div>
+
+            <!-- Date Selection -->
+            <div class="form-group">
+                <label for="date">Select Date</label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+            </div>
+
+            <!-- Showtime Selection -->
+            <div class="form-group">
+                <label for="showtime">Select Showtime</label>
+
+                <select id="showtime" required>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="1:30 PM">1:30 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                    <option value="9:30 PM">9:30 PM</option>
+                </select>
+            </div>
+
+            <!-- Continue Button -->
+            <button
+                type="button"
+                class="action-btn"
+                onclick="continueBooking()">
+
+                Continue to Select Seats
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="./movies.js"></script>
+    <script src="./booking.js"></script>
+
+</body>
+</html>
